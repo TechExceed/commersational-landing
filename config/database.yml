@@ -1,0 +1,38 @@
+default: &default
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
+
+development:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: commerce_landing_dev
+  pool: 100
+  prepared_statements: false
+  user: eyalkedem
+  password:
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: commerce_landing_test
+  pool: 100
+  prepared_statements: false
+  user: eyalkedem
+  password:
+  template: template0
+
+production:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: iexpert_prod
+  pool: 100
+  prepared_statements: false
+  user: ronsho
+  password:
