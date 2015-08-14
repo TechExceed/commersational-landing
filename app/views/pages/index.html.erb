@@ -13,12 +13,12 @@
         <h1>eCommerce one text at a time</h1>
         <h3>Sell your product in any messaging app: SMS, Facebook and more</h3>
         <div class="mtb">
-          <form role="form" action="register.php" method="post" enctype="plain"> 
-            <input type="email" name="email" class="subscribe-input" placeholder="Enter your e-mail address..." required>
+          <%= form_for Lead.new, remote: true do %>
+            <input type="email" name="lead[email]" class="subscribe-input" placeholder="Enter your e-mail address..." required>
             <button class='btn btn-conf btn-green' type="submit">Sign up now</button>
-          </form>
+          <% end %>
         </div><!--/mt-->
-        <h6>Sign up now to join our beta customer list today!</h6>
+        <h3>Sign up now to join our beta customer list today!</h3>
       </div>
     </div><!--/row-->
   </div><!--/container-->
