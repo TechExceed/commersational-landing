@@ -76,4 +76,16 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.action_mailer.default_url_options = { :host => 'commersational.com' }
+
+  ActionMailer::Base.smtp_settings = {
+    :port =>           '587',
+    :address =>           'smtp.mandrillapp.com',
+    :user_name =>           'ekedem@gmail.com',
+    :password =>           'wP9bY0YV5OJoXzn7CniQ3g',
+    :domain =>           'www.commersational.com',
+    :authentication =>           :plain,
+  }
+  ActionMailer::Base.delivery_method = :smtp
 end
