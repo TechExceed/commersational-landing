@@ -1,5 +1,7 @@
 class LeadMailer < ApplicationMailer
 
+	default from: 'do-not-reply@commersational.com'
+
 	def lead_received_email(lead)
     @lead = lead
     mail(to: ["ekedem@gmail.com", "ilan.kasan@gmail.com "], subject: 'Commersational - Lead received')
