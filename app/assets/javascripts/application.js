@@ -14,3 +14,19 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+// temp code - need to remove
+
+$(document).ready(function() {
+	//$('#questionnaire-modal').modal('show');
+	
+	$('#lead_ecommerce_platform').on('change', function() {
+	  val = this.value; // or $(this).val()
+	  if (val == "other") {
+	  	$("#other-platform-holder").show();
+	  }
+	  else {
+	  	$("#other-platform-holder").hide();	
+	  }
+	});
+});

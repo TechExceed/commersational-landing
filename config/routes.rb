@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root 'pages#index'
 
-  resources :leads, only: [:create]
+  resources :leads, only: [:create, :update]
 end

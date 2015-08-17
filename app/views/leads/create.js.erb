@@ -1,1 +1,13 @@
-alert('thank you');
+$('#questionnaire-holder').html('<%= escape_javascript(render :partial => "pages/questionnaire", locals: {lead: @lead}) %>');
+
+$('#questionnaire-modal').modal('show');
+
+$('#lead_ecommerce_platform').on('change', function() {
+  val = this.value; // or $(this).val()
+  if (val == "other") {
+  	$("#other-platform-holder").show();
+  }
+  else {
+  	$("#other-platform-holder").hide();	
+  }
+});
