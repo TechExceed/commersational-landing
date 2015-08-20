@@ -8,6 +8,7 @@ class LeadsController < ApplicationController
   def update
   	@lead = Lead.find(params[:id])
     @lead.update_attributes(lead_params)
+    @lead.notify_lead_owner if @lead.valid?
   end
 
   def lead_params
