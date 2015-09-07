@@ -14,6 +14,6 @@ class LeadMailer < ApplicationMailer
 
   def lead_confirmation_email(lead)
   	@lead = lead
-  	mail(from: "contact@commersational.com", to: @lead.email, bcc: ["ekedem@gmail.com"], subject: 'Commersational - signup confirmation')
+  	mail(from: "\"Commersational\" <contact@commersational.com>", to: @lead.email, bcc: ["ekedem@gmail.com"], subject: 'Commersational - signup confirmation')
   end
 end
