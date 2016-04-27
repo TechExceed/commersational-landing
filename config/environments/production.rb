@@ -81,9 +81,9 @@ Rails.application.configure do
 
   ActionMailer::Base.smtp_settings = {
     :port =>           '587',
-    :address =>           'smtp.mandrillapp.com',
-    :user_name =>           'ekedem@gmail.com',
-    :password =>           'wP9bY0YV5OJoXzn7CniQ3g',
+    :address =>           'smtp.postmarkapp.com',
+    :user_name =>           '0ab2acda-14a0-4b36-82cb-e4482208b606',
+    :password =>           '0ab2acda-14a0-4b36-82cb-e4482208b606',
     :domain =>           'www.commersational.com',
     :authentication =>           :plain,
   }
