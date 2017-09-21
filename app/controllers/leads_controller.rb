@@ -2,7 +2,6 @@ class LeadsController < ApplicationController
 
 	def create
 		@lead = Lead.new(lead_params)
-		@lead.save
   end
 
   def update
@@ -12,6 +11,6 @@ class LeadsController < ApplicationController
   end
 
   def lead_params
-  	params.require(:lead).permit(:email, :sell_online, :has_facebook_page, :ecommerce_platform, :other_platform)
+  	params.require(:lead).permit(:email)
   end
 end
